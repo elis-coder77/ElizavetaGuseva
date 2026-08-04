@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Елизавета Гусева</title>
+<meta name="description" content="Более 30 лет я работаю с алгоритмами и с помощью данных помогаю людям принимать решения. Учёт затрат, себестоимость, автоматизация — в металлургии, атомной энергетике, агропроме.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Елизавета Гусева">
+<meta property="og:description" content="Более 30 лет я работаю с алгоритмами и с помощью данных помогаю людям принимать решения.">
+<meta property="og:image" content="photo_MP4_web.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Елизавета Гусева">
+<meta name="twitter:description" content="Более 30 лет я работаю с алгоритмами и с помощью данных помогаю людям принимать решения.">
+<meta name="twitter:image" content="photo_MP4_web.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMyZjVkNWEiLz48dGV4dCB4PSIzMiIgeT0iNDMiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmFmYWY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7QldCTPC90ZXh0Pjwvc3ZnPgo=">
+<style>
+  :root {
+    --ink: #1c1f26;
+    --ink-soft: #4a5163;
+    --paper: #fafaf8;
+    --card: #ffffff;
+    --accent: #2f5d5a;
+    --accent-soft: #e6efee;
+    --line: #e4e2dd;
+    --gold: #b98a3e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .hero-text { flex: 1; min-width: 0; }
+  .hero-photo {
+    flex: 0 0 auto;
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--card);
+    box-shadow: 0 0 0 1px var(--line), 0 12px 28px rgba(28, 31, 38, 0.14);
+  }
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 0 0 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    font-size: 22px;
+    color: var(--accent);
+    font-weight: 600;
+    max-width: 640px;
+    margin: 0 0 28px;
+    line-height: 1.4;
+  }
+  .lede {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  /* Stat strip */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin: 44px 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .stat {
+    background: var(--card);
+    padding: 22px 18px;
+    text-align: left;
+  }
+  .stat .num {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat .label {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* Section framing */
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 36px;
+    letter-spacing: -0.01em;
+  }
+
+  /* Facets */
+  .facets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .facet {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 26px 26px 24px;
+  }
+  .facet .facet-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .facet-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .facet-head .facet-tag { margin-bottom: 10px; }
+  .facet-photo {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--card);
+    box-shadow: 0 0 0 1px var(--line);
+  }
+  .facet-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+  }
+  .facet-photo-color img { filter: none; }
+  .facet blockquote {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: var(--ink);
+    font-style: italic;
+    line-height: 1.55;
+  }
+  .facet .facet-note {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+  .facet-more {
+    grid-column: 1 / -1;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Experience timeline */
+  .job {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+  .job:first-of-type { border-top: none; padding-top: 0; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .job-org {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .job-role {
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .job ul {
+    margin: 12px 0 0;
+    padding-left: 20px;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .job li { margin-bottom: 6px; }
+  .job p.role-desc {
+    margin: 8px 0 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  .platform-note {
+    margin-top: 40px;
+    padding: 20px 22px;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .platform-note a { color: var(--accent); }
+
+  footer {
+    padding: 40px 0 64px;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 56px 0 40px; }
+    h1 { font-size: 36px; }
+    .tagline { font-size: 18px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .facets { grid-template-columns: 1fr; }
+    .hero-top { flex-direction: column-reverse; gap: 24px; }
+    .hero-photo { width: 128px; height: 128px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-top">
+      <div class="hero-text">
+        <h1>Елизавета Гусева</h1>
+        <p class="tagline">Более 30 лет я работаю с алгоритмами и с&nbsp;помощью данных помогаю людям принимать решения.</p>
+        <p class="lede">Больше тридцати лет я автоматизирую учёт и финансы на крупных предприятиях — цифры, себестоимость, прибыль, баланс. Всё это время я, по сути, занималась одним: искала алгоритм, который выделяет суть, не теряя деталей.</p>
+      </div>
+      <div class="hero-photo">
+        <img src="photo_MP4_web.jpg" alt="Елизавета Гусева">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="num">20+</span><span class="label">лет опыта работы по разработке, внедрению, сопровождению автоматизированных систем</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">отрасли: металлургия, атомная энергетика, агропром</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">крупных предприятий: НЛМК, Северсталь, Росэнергоатом, Балаковская АЭС, агрохолдинг БЭЗРК</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">СУБД: от Oracle до PostgreSQL</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Грани</h2>
+    <p class="section-title">Один и тот же поиск, разные углы</p>
+    <div class="facets">
+      <div class="facet">
+        <div class="facet-tag">Математика</div>
+        <blockquote>«По образованию математик. Всю жизнь ищу правильную систему отсчёта — точку, из которой картина складывается в целое».</blockquote>
+        <div class="facet-note">Ум как когнитивная сложность. Мудрость — как способность отсечь лишнее.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-tag">Автоматизация</div>
+        <blockquote>«У нас — ядро ERP-системы для крупных предприятий. А крупное предприятие задаёт другой взгляд на систему: разнопрофильные производства внутри одного холдинга, где нельзя упрощать в угоду скорости расчётов. Маленькая команда — поэтому мы были вынуждены делать по-настоящему эффективные решения. Систему эксплуатируют много лет — значит, она устойчива к изменениям».</blockquote>
+        <div class="facet-note">Система как когнитивная сложность предприятия: держит все измерения, не сводя их к одному числу. Позже это стали называть цифровым двойником.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-tag">Себестоимость</div>
+        <blockquote>«Себестоимость — это моя оптика. Она позволяет видеть детали, не теряя сути. Материальные потоки — это факт, фактическая деятельность предприятия. А себестоимость — его интерпретация: она зависит от правил, и посчитать можно по-разному, в зависимости от целей. Так картина становится объёмной».</blockquote>
+        <div class="facet-note">Учёт затрат и калькулирование себестоимости — с разных сторон и на разной глубине.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-tag">Методология</div>
+        <blockquote>«Больше тридцати лет я переводила сложность в цифры — а теперь перевожу её в слова. Это всё тот же поиск алгоритма: как донести мысль без искажений и без потерь».</blockquote>
+        <div class="facet-note">От автоматизации учёта — к извлечению и передаче смыслов.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-tag">Эффективность</div>
+        <blockquote>«Иногда, чтобы быть эффективным, нужно не делать лишнего. Не добавить действие, а вовремя его убрать».</blockquote>
+        <div class="facet-note">Максимум результата — минимальными средствами.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-tag">Трансформация бизнеса</div>
+        <blockquote>«Я никогда не считала себя трансформатором, но, по сути, я меняла бизнес — за счёт автоматизации, за счёт того, что цифры становились очевидными, управленческие решения принимались как само собой разумеющиеся».</blockquote>
+        <div class="facet-note">Не ломала бизнес под чужую модель — шла от реального производства, а не наоборот.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-head">
+          <div class="facet-tag">Соавтор проекта FujiChange «О трансформации бизнеса наглядно»</div>
+          <div class="facet-photo facet-photo-color"><img src="photo_Fuji_web.jpg" alt="Елизавета Гусева"></div>
+        </div>
+        <blockquote>«Верю, что люди созданы для осмысления, а не для рутины. Преобразую эту веру в реальные изменения бизнеса».</blockquote>
+        <div class="facet-note">«Мастерская Аватара» (<a href="https://www.changeclub.ru/" target="_blank" rel="noopener">changeclub.ru</a>) — разбирает инструменты управления трансформацией (Cynefin, Kotter, ADKAR) на примере фильма «Аватар», вместе со Степаном Масленниковым и Ланой Холмс.</div>
+      </div>
+      <div class="facet">
+        <div class="facet-head">
+          <div class="facet-tag">Автор проекта «Смыслы и контексты»</div>
+          <div class="facet-photo"><img src="photo_1_web.jpg" alt="Елизавета Гусева"></div>
+        </div>
+        <blockquote>«Меняя оптику, мы меняем не мир. Мы меняем то, что способны в нём увидеть».</blockquote>
+        <div class="facet-note">О том, как книги, наука и личный опыт становятся линзами на привычную жизнь. Читать в <a href="https://t.me/great_to_learn" target="_blank" rel="noopener">Telegram</a> и <a href="https://vk.ru/club240558692" target="_blank" rel="noopener">VK</a>.</div>
+      </div>
+      <div class="facet-more">Здесь постепенно появятся новые грани.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Опыт</h2>
+    <p class="section-title">20+ лет разработки, внедрения и сопровождения учётных систем</p>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">Агропромышленный холдинг «БЭЗРК-Белгранкорм»</div>
+      </div>
+      <p class="role-desc">Разработка методики расчёта себестоимости и калькулирования продукции, внедрение и сопровождение автоматизированной системы CE2Ora.</p>
+      <ul>
+        <li>Автоматизированы все области мясопереработки: разделка птицы, полуфабрикаты, колбасы, комбикорма</li>
+        <li>Реализованы разные методы учёта себестоимости — по данным MES-систем и по рецептам</li>
+        <li>Раздельный расчёт себестоимости продукции из сырья разных поставщиков (несколько птицефабрик)</li>
+        <li>Моделирование учёта по разным экономическим схемам холдинга: купля-продажа, оказание услуг по переработке, переработка давальческого сырья</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">ОАО «НЛМК»</div>
+        <div class="job-role">20 лет в чёрной металлургии</div>
+      </div>
+      <ul>
+        <li>Разработка методики учёта затрат и калькулирования себестоимости, внедрение и сопровождение комплекса</li>
+        <li>Методика параллельного учёта в USD для отчётности по GAAP</li>
+        <li>Методика калькулирования по первичным элементам затрат</li>
+        <li>Налоговый учёт: разделение затрат на прямые и косвенные по правилам НК РФ</li>
+        <li>Расчёт себестоимости в разрезе единиц металла и технологических операций по данным системы слежения за металлом в листопрокатном производстве</li>
+        <li>Оперативная оценка себестоимости жидкой стали в разрезе плавок в конвертерном производстве</li>
+        <li>Анализ прибыли в разрезе приплат и скидок за характеристики продукции</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">ОАО «Северсталь»</div>
+      </div>
+      <ul>
+        <li>Налоговый учёт: методика учёта затрат и калькулирования себестоимости с разделением на прямые и косвенные по правилам НК РФ</li>
+        <li>Калькулирование по данным MES-систем: баланс металла, учёт затрат и себестоимость в конвертерном и прокатном производстве</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">Концерн «Росэнергоатом»</div>
+      </div>
+      <p class="role-desc">Разработка типового решения по интеграции подсистемы «Бухгалтерский и налоговый учёт» с подсистемами КИС (на базе SAP), адаптация для Балаковской АЭС, Ростовской АЭС и центрального аппарата, внедрение и сопровождение.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">Балаковская АЭС</div>
+      </div>
+      <p class="role-desc">Разработка интеграционной модели для формирования отчётности в CE2Ora на базе данных, введённых в SAP ERP, внедрение и сопровождение.</p>
+    </div>
+
+    <div class="platform-note">
+      Все задачи внедрены на автоматизированной системе CE2Ora (автор — ООО «КОМЭК-92», <a href="https://www.comec92.ru" target="_blank" rel="noopener">comec92.ru</a>). Функционал системы переведён с СУБД Oracle (CE2Ora) на PostgreSQL (CE2PG).
+    </div>
+  </section>
+
+  <footer>
+    Елизавета Гусева · elisence77@gmail.com
+  </footer>
+</div>
+
+</body>
+</html>
